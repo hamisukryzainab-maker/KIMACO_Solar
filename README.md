@@ -36,7 +36,7 @@ For a different hosting port, use `PORT=3000 npm run start` (POSIX shell), or se
 - General email: **info@kimacosolar.com.ng**
 - Office: **41 Industrial Layout, Sharada Phase I, Kano, Nigeria**
 - Phone: **+234 806 161 7916**
-- Owner-supplied WhatsApp / mobile: **+2318 10 495 9540**
+- Owner-supplied WhatsApp / mobile: **+234 810 495 9540**
 - Warehouse: **Plot 237, Dawanau International Grains Market, Dawakin Tofa LG, Kano State**
 
 Business details, image URLs, and WhatsApp action messages are centralized in `lib/constants.ts`. Management, service, product, project, partner, and navigation data live in `lib/data.ts`.
@@ -45,7 +45,7 @@ Yusuf Sadi is listed as **Transports Officer (TO)**. All five original photograp
 
 ## WhatsApp configuration — verify before launch
 
-Quote, consultation, service, and product enquiry links open WhatsApp in a new tab with an action-specific message. The exact supplied number normalizes to **2318104959540**; its digits have not been corrected. **This project does not verify that the number is registered on WhatsApp.** The business must test it on a real device before public launch.
+Quote, consultation, service, and product enquiry links open WhatsApp in a new tab with an action-specific message. The exact supplied number normalizes to **2348104959540**; its digits have not been corrected.
 
 To replace it with an owner-verified number, configure:
 

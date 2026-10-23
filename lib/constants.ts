@@ -7,8 +7,8 @@ export const COMPANY = {
   url: "https://www.kimacosolar.com.ng/",
   phone: "+234 806 161 7916",
   phoneHref: "tel:+2348061617916",
-  // This is the exact owner-supplied number. Registration on WhatsApp is not verified.
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+2318 10 495 9540",
+  // This is the exact owner-supplied number.
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+234 810 495 9540",
   office: "41 Industrial Layout, Sharada Phase I, Kano, Nigeria",
   warehouse: "Plot 237, Dawanau International Grains Market, Dawakin Tofa LG, Kano State",
 } as const;

@@ -25,19 +25,19 @@ test("official business contact details and warehouse are preserved exactly", ()
   assert.equal(COMPANY.warehouse, "Plot 237, Dawanau International Grains Market, Dawakin Tofa LG, Kano State");
 });
 
-test("the supplied unusual WhatsApp digits are normalized, never corrected", () => {
-  assert.equal(normalizeWhatsAppNumber("+2318 10 495 9540"), "2318104959540");
-  assert.equal(normalizeWhatsAppNumber("(+2318) 10-495-9540"), "2318104959540");
+test("the supplied WhatsApp digits are normalized, never corrected", () => {
+  assert.equal(normalizeWhatsAppNumber("+234 810 495 9540"), "2348104959540");
+  assert.equal(normalizeWhatsAppNumber("(+234) 810-495-9540"), "2348104959540");
   assert.throws(() => normalizeWhatsAppNumber("no number"));
 });
 
 test("WhatsApp messages are safely encoded and the number is configurable", () => {
   const message = "Hello KIMACO, solar & power? 20+ years.";
-  const url = new URL(whatsappUrl(message, "+2318 10 495 9540"));
+  const url = new URL(whatsappUrl(message, "+234 810 495 9540"));
   assert.equal(url.origin, "https://wa.me");
-  assert.equal(url.pathname, "/2318104959540");
+  assert.equal(url.pathname, "/2348104959540");
   assert.equal(url.searchParams.get("text"), message);
-  assert.match(ACTIONS.consultation, /wa\.me\//);
+  assert.match(ACTIONS.consultation, /wa\.me\/2348104959540/);
   assert.match(new URL(ACTIONS.consultation).searchParams.get("text"), /request a consultation/);
   assert.match(new URL(ACTIONS.quote).searchParams.get("text"), /request a quotation/);
 });
